@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+  height: 100vh;
+  background: tan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.win {
+  position: absolute;
+  background-color: red;
+  color: yellow;
+  z-index: 1;
+  padding: 20px 15px;
+  border-radius: 20px;
+  animation-name: winAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes winAnimation {
+  0% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+.container {
+  background-color: white;
+  width: 300px;
+  height: 400px;
+  padding: 35px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 10px;
+  background-color: tan;
+  padding: 10px;
+  width: 93%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header p {
+  font-size: 18px;
+  font-weight: bold;
+}
+.header p span {
+  font-size: 13px;
+  color: white;
+}
+.coin {
+  height: 150px;
+  width: 150px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.coin img {
+  width: 145px;
+}
+
+.heads,
+.tails {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.tails {
+  transform: rotateX(180deg);
+}
+
+@keyframes spinTheTails {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(1980deg);
+  }
+}
+@keyframes spinTheHeads {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(2160deg);
+  }
+}
+
+#flip-button {
+  padding: 13px 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid tan;
+  background-color: tan;
+  transition: 0.25s;
+}
+
+#flip-button:hover {
+  transform: scale(1.1);
+}
+
+#flip-button:disabled {
+  background-color: #e1e0ee;
+  border-color: #e1e0ee;
+  color: #101020;
+}
+
+.pop-coins,
+.popMain {
+  position: absolute;
+}
+.popMain img {
+  /* width: 100%; */
+  height: 90vh;
+}
+.pop-coins img {
+  width: 100px;
+  height: 100px;
+}
+.coin1 {
+  top: 0;
+}
+.coin2 {
+  top: 100px;
+  left: 100px;
+}
+.coin3 {
+  bottom: 100px;
+  right: 100px;
+}
+.coin4 {
+  bottom: 150px;
+  left: 40px;
+}
+.coin5 {
+  bottom: 100px;
+}
+.coin6 {
+  right: 100px;
+}
+
+.restart {
+  position: absolute;
+  bottom: 100px;
+  padding: 20px 40px;
+  border: 2px solid white;
+  border-radius: 10px;
+  transition: 0.25s;
+}
+.restart:hover {
+  transform: scale(1.1);
+  background-color: tan;
+  color: white;
+}

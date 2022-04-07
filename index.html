@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Task</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <!-- header -->
+        <div class="header">
+          <p>Toss Coin <span>-Keemchard</span></p>
+        </div>
+
+        <!-- coin -->
+        <div class="coin" id="coin">
+          <div class="heads">
+            <img src="images/head.jpg" />
+          </div>
+
+          <div class="tails">
+            <img src="images/tail.jpg" />
+          </div>
+        </div>
+
+        <!-- status -->
+        <div style="display: none" class="stats">
+          <p id="heads-count">Heads: 0</p>
+          <p id="tails-count">Tails: 0</p>
+        </div>
+
+        <button id="flip-button">Flip The Coin</button>
+      </div>
+
+      <!-- win coins pop ups -->
+      <div class="mainCoin popMain">
+        <img src="images/mainCoin.png" />
+      </div>
+      <div class="coin1 pop-coins"><img src="images/coin1.png" /></div>
+      <div class="coin2 pop-coins"><img src="images/coin2.png" /></div>
+      <div class="coin3 pop-coins"><img src="images/coin3.png" /></div>
+      <div class="coin4 pop-coins"><img src="images/coin4.png" /></div>
+      <div class="coin5 pop-coins"><img src="images/coin5.png" /></div>
+      <div class="coin6 pop-coins"><img src="images/coin6.png" /></div>
+      <div class="win">
+        <h1>YOU WIN it's a HEAD!</h1>
+      </div>
+
+      <button class="restart"><h1>RESTART</h1></button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
